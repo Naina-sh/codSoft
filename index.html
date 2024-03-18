@@ -6,53 +6,265 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <style>
+        .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #222;
+
+        }
+
+        .slides {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 30px;
+            height: 250px;
+            background-color: slateblue;
+            margin: 16px;
+            cursor: pointer;
+            transition: width 0.3s ease-in, height 0.3s ease-in;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hidden:checked+.box {
+            width: 315px;
+            height: 475px;
+
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .b1 {
+            background-image: url('/beauty.jpg');
+        }
+
+        .b2 {
+            background-image: url('/newdres.jpeg');
+        }
+
+        .b3 {
+            background-image: url('/longdre.webp');
+        }
+
+        .b4 {
+            background-image: url('/mendres.jpeg');
+        }
+
+        .b5 {
+            background-image: url(/newmend.jpg);
+        }
+
+        img {
+
+            max-width: 300px;
+            float: left;
+            border: 3px solid #222;
+            margin-left: -200px;
+            background-color: brown;
+
+        }
+
+        hello {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: aquamarine;
+
+        }
+
+        .wrapper {
+            margin: 150px auto;
+            width: 70%;
+        }
+
+        body {
+            background-color: #fbe0e0;
+        }
+
+        .container {
+            max-width: max-content;
+            overflow: hidden;
+
+        }
+
+        .image {
+            margin-top: -20px;
+            margin-bottom: 30px;
+            width: 30%;
+            height: 50%;
+
+            float: left;
+        }
+
+        .image-container {
+            display: flex;
+            padding-left: 10px;
+        }
+
+
+
+        .btn {
+            font-size: x-large;
+            font-weight: 600;
+            padding: auto;
+            margin-left: 6px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Calculator</h1>
-    <div class="new">
-        <input class="input" type="text" />
-        <br>
-        <br>
+    <div>
 
-        <div class="container">
+        <h1 class="text-4xl text-pink-900 text-center  font-serif font-extrabold relative bg-cover bg-center h-96"
+            style="background-image: url('/fash_nan.avif') ">GLAMOROUS &nbsp;&nbsp; ELEGANCE</h1>
 
-            <button class="button">7</button>
-            <button class="button">8</button>
-            <button class="button">9</button>
-            <button class="button">+</button>
-
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button">-</button>
-
-            <button class="button">1</button>
-            <button class="button">2</button>
-            <button class="button">3</button>
-            <button class="button">=</button>
-            <button class="button">0</button>
-
-
-            <button class="button">AC</button>
-            <button class="button">DEL</button>
-
-
-
-
-
-
-
-
-
+        <div class="text-center text-3xl relative bg-cover bg-center h-15" style="background-image: url('/img.avif')">
+            <button class="btn hover:underline mx-9">Home </button>
+            <button class="btn hover:underline  mx-9">Blogs </button>
+            <button class="btn hover:underline mx-9">Serivces </button>
+            <button class="btn hover:underline mx-9">Contact Us </button>
 
 
         </div>
 
-    </div>
+        <div class="relative bg-cover bg-center h-96" style="background-image: url('/img.avif')">
+            <br>
+
+            <p class="text-3xl font-semibold text-center text-gray-900 ">Welcome to the Sartorial society!! <br></p><br>
+            <div class="container relative bg-cover bg-center h-70" style="background-image: url('/pinkna.jpg') ">
+                <div class="text">
+                    <p class="text-2xl font-serif  ">
+                        Fashion is an art form that allows individuals to express themselves through clothing,
+                        cosmetics,
+                        jewelry, and accessories. Unleash your inner fashionista and elevate your wardrobe with our
+                        handpicked selection of must-have pieces from top designers and emerging brands alike. Welcome
+                        to
+                        the Glamour & Elegance Chronicles, where sophistication meets style and every detail exudes
+                        timeless
+                        allure. Join us on a journey through the realms of high fashion, luxury living, and the art of
+                        refinement. From dazzling red carpet moments to intimate glimpses into the world of haute
+                        couture,
+                        our blog is your passport to a world of glamour
+                    </p>
+                </div>
+
+            </div>
+            <h1 class="text-4xl font-serif text-orange-600 text-center h-96px">Our new arrivals</h1>
+            <div class="slides relative bg-cover bg-center h-15" style="background-image: url('/pinkna.jpg')">
+                <input type="radio" name="slider" id="radio1" class="hidden" checked="">
+                <label for="radio1" class="box b1"></label>
+                <input type="radio" name="slider" id="radio2" class="hidden">
+                <label for="radio2" class="box b2"></label>
+                <input type="radio" name="slider" id="radio3" class="hidden">
+                <label for="radio3" class="box b3"></label>
+                <input type="radio" name="slider" id="radio4" class="hidden">
+                <label for="radio4" class="box b4"></label>
+                <input type="radio" name="slider" id="radio5" class="hidden">
+                <label for="radio5" class="box b5"></label>
+            </div><br>
+            <h1 class="text-4xl text-center font-bold text-fuchsia-800">Blog</h1>
+            <div class="text-2xl text-teal-700 text-center">
+                In a world where trends come and go, there's something undeniably captivating about timeless elegance.
+                Whether attending a red-carpet event or a sophisticated soirée, mastering the art of glamorous elegance
+                can elevate your style to new heights. Join us as we explore the essence of glamorous elegance and
+                discover how to infuse it into your wardrobe with effortless grace.<br>
+                <br>
+                Glamorous elegance is more than just a look—it's an attitude, a feeling of confidence and refinement
+                that radiates from within. It's about embracing classic silhouettes, luxurious fabrics, and understated
+                sophistication. Think Audrey Hepburn in a little black dress, Grace Kelly in a tailored suit, or
+                Jacqueline Kennedy in a timeless pearl necklace. At its core, glamorous elegance is about embracing
+                simplicity, sophistication, and grace.<br>
+                <br>
+                Glamorous elegance is a timeless aesthetic that transcends trends and celebrates the enduring allure of
+                classic style. By embracing timeless silhouettes, luxurious fabrics, and understated sophistication, you
+                can elevate your look with effortless grace and exude an air of glamour and elegance that is truly
+                timeless.
+            </div>
+
+            <h1 class="text-4xl my-10 font-bold text-center text-amber-800 font-serif">OUR SERVICES </h1>
+            <div class="hello ">
+                <div class="wrapper">
+                    <img src="/servicessfashion.jpg">
+                    <div class="text-box mx-48">
+                        <h2 class="text-3xl underline text-pink-700">Personal Styling Consultations:</h2><br>
+                        <p class="text-2xl text-red-800"> Offer one-on-one sessions with professional stylists who can
+                            help our customers to find outfits
+                            that suit their body type, personal style, and occasion.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="hello ">
+                <div class="wrapper">
+                    <img src="/workshop.png">
+                    <div class="text-box mx-48">
+                        <h2 class="text-3xl underline text-pink-700">Fashion Workshops and Events:</h2><br>
+                        <p class="text-2xl text-red-800"> Host workshops, seminars, or fashion shows to educate
+                            customers about fashion trends, styling tips, and industry insights, fostering a sense of
+                            community and loyalty.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="hello ">
+                <div class="wrapper">
+                    <img src="/virtual.png">
+                    <div class="text-box mx-48">
+                        <h2 class="text-3xl underline text-pink-700">Virtual Styling Services:</h2><br>
+                        <p class="text-2xl text-red-800"> Offer virtual styling sessions via video calls or chat
+                            platforms, where customers can receive personalized style advice and recommendations
+                            remotely.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <h1 class="text-3xl text-rose-500 text-center"> Contact Us</h1>
+            <br>
+            <form>
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label mx-22 text-xl font-bold" for="form1Example1">Email address</label>
+                    <input type="email" id="form1Example1" class="form-control text-2xl border-solid" />
+
+                </div>
 
 
-    <script src="calci.js"></script>
+                <div data-mdb-input-init class="form-outline mb-15">
+                    <label class="form-label mx-23  text-xl font-bold" for="form1Example2">Password</label>
+                    <input type="password" id="form1Example2" class="form-control text-2xl border-solid" />
+
+                </div>
+
+
+                <div class="row mb-15">
+                    <div class="col d-flex justify-content-center">
+                        <br>
+                        <div class="form-check">
+
+                            <label class="form-check-label  text-xl font-bold mx-2" for="form1Example3"> Remember me
+                            </label>
+                        </div>
+                    </div>
+
+                    <br>
+                    <button data-mdb-ripple-init type="submit"
+                        class="btn btn-primary btn-block mx-24 text-xl">Submit</button>
+            </form>
+
+        </div>
+
 </body>
 
 </html>
